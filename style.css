@@ -1149,6 +1149,7 @@ footer {
 @media screen and (max-width: 768px) {
     .hamburger {
         display: block;
+        z-index: 1001;
     }
 
     .nav-links {
@@ -1163,6 +1164,8 @@ footer {
         padding: 20px 0;
         transition: 0.3s;
         z-index: 1000;
+        display: flex;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .nav-links.active {
@@ -1171,6 +1174,15 @@ footer {
 
     .nav-links li {
         margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+        font-size: 1.2rem;
     }
 
     .hamburger.active span:nth-child(1) {
