@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshit Singh Jadon</title>
+    <title>Harshit Singh Jadon - Cybersecurity Specialist</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -431,63 +431,6 @@
     </footer>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = this.name.value;
-            const email = this.email.value;
-            const message = this.message.value;
-
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "jadonharshitmca@gmail.com",
-                Password: "your-app-specific-password",
-                To: "jadonharshitmca@gmail.com",
-                From: email,
-                Subject: "New Contact Form Message",
-                Body: `Name: ${name}<br>Email: ${email}<br>Message: ${message}`
-            }).then(
-                message => alert("Message sent successfully!")
-            );
-        });
-
-        function openModal(imageSrc) {
-            const modal = document.getElementById('certModal');
-            const modalImg = document.getElementById('modalImg');
-            modal.style.display = "block";
-            modalImg.src = imageSrc;
-            
-            // Close modal when clicking outside the image
-            modal.onclick = function(event) {
-                if (event.target === modal) {
-                    closeModal();
-                }
-            }
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    closeModal();
-                }
-            });
-        }
-
-        function closeModal() {
-            document.getElementById('certModal').style.display = "none";
-        }
-
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.hamburger').classList.remove('active');
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html> 
